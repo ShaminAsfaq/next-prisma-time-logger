@@ -2,7 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Table from './components/Table';
+import Table from '../components/Table';
+import Surface from '../components/Surface';
 
 export default function Home({ data }) {
   console.log(data)
@@ -15,7 +16,8 @@ export default function Home({ data }) {
       </Head>
 
       <main className={styles.main}>
-        <Table />
+        {/* <Table /> */}
+        <Surface />
       </main>
     </div>
   )
