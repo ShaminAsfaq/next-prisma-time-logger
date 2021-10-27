@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "EntryLog" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "start" DATETIME NOT NULL,
+    "end" DATETIME NOT NULL,
+    "user" TEXT NOT NULL
+);
