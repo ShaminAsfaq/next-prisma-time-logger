@@ -6,7 +6,13 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { Alert } from "@mui/material";
 
+import { useState } from "react";
+
 const Home = () => {
+    const [startLog, setStartLog] = useState('');
+    const [endLog, setEndLog] = useState('');
+
+
     return (
         <React.Fragment>
             <CssBaseline />
@@ -15,18 +21,22 @@ const Home = () => {
                     // sx={{ height: '100vh' }}
                     style={parentStyle}
                 >
-                    <div style={circleStyle}></div>
-                    <Typography variant="h3" component="div">
-                        00:00:00
-                    </Typography>
-
+                    <div className="inner">
+                        <Typography style={timerStyle} variant="h3" component="div">
+                            00:00:00
+                        </Typography>
+                    </div>
                     <div style={buttonStyle}>
                         <Button variant="contained">Start</Button>
                     </div>
-                    <div style={{ position: 'absolute', top: '70%', margin: '5%' }}>
+                    <div style={alertStyle}>
                         <Alert severity="error">Just sitting there and eating grass. - Make it functional</Alert>
                     </div>
                 </Box>
+                <div class="ocean">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
             </Container>
         </React.Fragment>
     );
@@ -36,10 +46,20 @@ export {
     Home as default
 }
 
-const buttonStyle = {
-    position: 'absolute',
-    top: '65%',
+const alertStyle = {
+    // position: 'absolute',
+    // top: '70%',
     margin: '2%'
+}
+
+const timerStyle = {
+    color: 'white'
+}
+
+const buttonStyle = {
+    // position: 'absolute',
+    // top: '65%',
+    margin: '5%'
 
 }
 
@@ -57,5 +77,7 @@ const circleStyle = {
 const parentStyle = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: '500px'
 }
