@@ -33,9 +33,9 @@ const Home = () => {
                         <Alert severity="error">Just sitting there and eating grass. - Make it functional</Alert>
                     </div>
                 </Box>
-                <div class="ocean">
-                    <div class="wave"></div>
-                    <div class="wave"></div>
+                <div className="ocean">
+                    <div classNameclass="wave"></div>
+                    <div className="wave"></div>
                 </div>
             </Container>
         </React.Fragment>
